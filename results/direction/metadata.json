@@ -1,0 +1,18 @@
+{
+  "task": "Predict probability that next observed adjusted close-to-close return is strictly positive. Zero returns are not-up, not labeled as a decline.",
+  "data_sha256": "f47a1ddfbb3f975840dafd91599fa797e06fe8510c9c7af422c3d041fba77ab4",
+  "plan_sha256": "9eb6518f3faa67ffa6c32ce4403d4e240051067b2e695ce3602492b4adf72986",
+  "raw_first_date": "2020-01-02",
+  "raw_last_date": "2026-11-20",
+  "raw_rows": 176664,
+  "stocks": 102,
+  "evaluated_rows": 99144,
+  "up_rate": 0.5200012103606875,
+  "zero_returns": 307,
+  "test_dates": [
+    "2023-01-03",
+    "2026-11-19"
+  ],
+  "last_label_date": "2026-11-20",
+  "scope": "Exploratory retrospective reuse of a previously inspected dataset. No fresh confirmatory holdout, trading strategy, live trading or profit claim. No test-driven retries."
+}

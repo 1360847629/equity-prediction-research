@@ -1,0 +1,4 @@
+PASS: signed next-return labels align; future price changes do not alter past features.
+PASS: logistic synthetic holdout accuracy 0.9940.
+PASS: neural synthetic holdout accuracy 0.9860.
+PASS: probabilities, ensemble weights and all aggregate metrics match saved predictions.
