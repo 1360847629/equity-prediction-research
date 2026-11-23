@@ -1,0 +1,11 @@
+{
+  "status": "Exploratory retrospective extension; 2025-2026 outcomes were already inspected in the starter project. This is not a fresh confirmatory holdout.",
+  "hypothesis": "Trailing absolute returns, daily range and volume surprises contain incremental information about next-observation absolute returns beyond a trailing-20 baseline.",
+  "test_years": [2023, 2024, 2025, 2026],
+  "validation": "Year immediately preceding each test year; all earlier observations used for initial training, then refit through validation year.",
+  "models": ["ridge alpha=100", "boosted stumps bins=15 rounds=100", "ReLU neural network width=16 epochs=20 Adam lr=.001 seed=42", "convex ensemble weights selected on validation only at increments of .25"],
+  "primary_metric": "MAE; equal weight per stock-day observation",
+  "uncertainty": "Paired circular moving-block bootstrap of daily mean MAE differences; 10-session blocks, 2000 draws; sensitivity at 5 and 20 sessions. Exploratory intervals; not adjusted for multiple comparisons or research selection.",
+  "ablation": "Ridge with trailing absolute-return features only versus full-feature ridge, refit per fold.",
+  "no_result_driven_retries": true
+}

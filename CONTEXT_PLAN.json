@@ -1,0 +1,12 @@
+{
+  "task": "Exploratory next-observation up classification with stock, market and sector ETF context",
+  "folds": [2023, 2024, 2025, 2026],
+  "context_symbols": ["SPY", "QQQ", "IWM", "XLK", "XLF", "XLV", "XLE", "XLI", "XLY", "XLP", "XLU", "XLRE", "XLB", "XLC"],
+  "features": "Original 8 stock features; stock momentum 20/60 observations; each ETF return over 1/5/20 observations and 20-observation mean absolute return; stock 5-observation return minus SPY 5-observation return. All information available only after the day's close.",
+  "models": "Original-feature logistic control; context logistic; context 16-unit sigmoid neural network, 20 epochs, seed 42; mature XGBoost if runtime permits.",
+  "xgboost": {"objective":"binary:logistic", "tree_method":"hist", "max_depth":3, "eta":0.03, "min_child_weight":100, "lambda":20, "subsample":0.8, "colsample_bytree":0.8, "seed":42, "nthread":2},
+  "boosting_rounds": [50, 150],
+  "selection": "Prior-year validation log loss chooses XGBoost rounds and the best single context model. Then refit on all pre-test labels. No test-driven retries or threshold optimization. Classification threshold fixed at .5.",
+  "evaluation": "Identical aligned rows for all baselines and models. Primary log loss; accuracy, balanced accuracy, Brier and AUC secondary; daily paired block-bootstrap gain intervals (5/10/20 session blocks).",
+  "scope": "Previously inspected retrospective dataset, convenience stocks and retrospectively adjusted ETF data; no new confirmatory holdout, trading strategy or profitability claim. No economic sector membership inference is made from the ETF features."
+}

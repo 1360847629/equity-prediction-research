@@ -1,0 +1,10 @@
+{
+  "task": "Predict probability that next observed adjusted close-to-close return is strictly positive. Zero returns are not-up, not labeled as a decline.",
+  "folds": [2023, 2024, 2025, 2026],
+  "selection": "Select convex logistic/neural ensemble weight from 0,.25,.5,.75,1 using prior-year validation log loss; refit on all pre-test labels. All other settings fixed.",
+  "models": "L2 logistic regression; 16-unit ReLU neural classifier with sigmoid output, binary cross entropy and Adam, 20 epochs, seed 42.",
+  "baseline": "Pre-test historical up frequency; always-up decision baseline; 50/50 probability reference; train-only conditional momentum baseline.",
+  "metrics": "Primary log loss; secondary accuracy at fixed .5 threshold, balanced accuracy, ROC AUC and Brier score. Calibration table with fixed bins.",
+  "uncertainty": "Paired daily average log-loss gains over historical up-frequency baseline, circular moving-block bootstrap: 2000 draws, blocks 5/10/20 sessions.",
+  "scope": "Exploratory retrospective reuse of a previously inspected dataset. No fresh confirmatory holdout, trading strategy, live trading or profit claim. No test-driven retries."
+}

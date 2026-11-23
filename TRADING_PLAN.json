@@ -1,0 +1,14 @@
+{
+  "status": "Exploratory historical simulation on previously inspected data; rules fixed before this simulation, not an untouched confirmatory test.",
+  "initial_capital_usd": 100000,
+  "execution": "Observe signal after session t close; enter at next observed market session open and liquidate at that same session close. Never trade at signal-day close. No overnight positions, leverage or shorts.",
+  "primary_strategy": "Rank validation_selected probabilities descending, ticker ascending to break ties; buy at most 20 stocks with probability >= .55; allocate exactly 5% of opening portfolio equity per stock INCLUDING entry costs; unallocated funds stay in cash with zero interest.",
+  "comparators": ["top20_unfiltered: same ranking and sizing without probability cutoff", "equal_weight_intraday: buy all eligible stocks equally, capped at 5% per stock", "SPY_intraday: fully invested next-open to same-close exposure; concentration exception for benchmark", "SPY_buy_hold: full-period adjusted-price proxy including overnight exposure, not exposure matched", "cash: zero return"],
+  "costs_bps_per_side": {"commission":1,"half_spread":2,"slippage":3},
+  "one_way_total_cost_sensitivity_bps": [0, 6, 15],
+  "cost_accounting": "Buy notional = allocated budget/(1+one_way_cost); round-trip proceeds = buy_notional*(exit_close/entry_open)*(1-one_way_cost). Charge both entry and exit notionals. Costs are assumed scenarios, not measured broker quotes.",
+  "primary_cost_scenario_bps": 6,
+  "calendar": "Use SPY session calendar; require execution to be the immediate next session after signal. No stale signals or future-price availability filtering when choosing stocks; missing chosen execution prices cause an error.",
+  "metrics": "Cumulative return, 252-session annualized return/volatility, zero-risk-free Sharpe, close-to-close maximum drawdown including initial capital, worst day, net round-trip win rate/profit factor, daily turnover, exposure and cost totals.",
+  "limitations": "Daily OHLC proxy fills; no actual quotes, auction fills, capacity/market-impact model, liquidity participation limits, integer shares, taxes, account minimum fees or live orders. Close-marked drawdown does not measure intraday worst loss. Retrospective adjusted data and convenience-universe bias remain. Forecast target is next close-to-close direction whereas the tradable simulation earns only next open-to-close returns; the overnight component cannot be captured from a post-close signal at that close."
+}

@@ -1,0 +1,13 @@
+data/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+results/**/predictions.csv
+results/test_predictions.csv
+results/**/out_of_time_predictions.csv
+results/**/direction_predictions.csv
+results/**/trade_ledger.csv
+results/**/daily_portfolios.csv
+results/**/xgboost_*.json
