@@ -1,0 +1,17 @@
+{
+  "signals_sha256": "c142b72604eaef30795bf83fba0e3eb0fba88fe88f98af54416d10a0b710097f",
+  "stock_sha256": "f47a1ddfbb3f975840dafd91599fa797e06fe8510c9c7af422c3d041fba77ab4",
+  "context_sha256": "6482e75d8b2ad7210c362420655853fa9cb81b8ff18b067f024fc2821f2fb712",
+  "plan_sha256": "38c4b8a3ee1b0ca4f4a14622f15ed20bb4f498136e02a57b4e3473b8e9747df4",
+  "first_signal_date": "2023-01-03",
+  "first_execution": "2023-01-04",
+  "last_execution": "2026-11-20",
+  "sessions": 975,
+  "sessions_without_predictions_cash_for_stock_strategies": [
+    "2024-01-02",
+    "2025-01-02",
+    "2026-01-02"
+  ],
+  "costs_are_assumptions_not_broker_quotes": true,
+  "scope": "Exploratory historical simulation on previously inspected data; rules fixed before this simulation, not an untouched confirmatory test."
+}

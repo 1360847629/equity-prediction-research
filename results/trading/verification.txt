@@ -1,0 +1,2 @@
+PASS: round-trip costs, positive-return arithmetic and initial-capital drawdown match hand calculations.
+PASS: delayed execution, position limits, ledger reconciliation, fee charges, cost monotonicity and cash-gap behavior.
