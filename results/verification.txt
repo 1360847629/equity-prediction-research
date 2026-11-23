@@ -1,0 +1,2 @@
+PASS: changing future prices/volumes does not alter past features.
+PASS: targets equal next-observation absolute close-to-close returns.
