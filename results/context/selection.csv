@@ -1,0 +1,5 @@
+year,selected,xgboost_rounds,validation_log_losses,train_rows,validation_rows,refit_rows,test_rows
+2023,xgboost_context,50,"{""logistic_original"": 0.702587184598313, ""logistic_context"": 0.7789518015278466, ""neural_context"": 0.8469852380345334, ""xgboost_context"": 0.716433203608382}",45288,25500,70890,25398
+2024,xgboost_context,150,"{""logistic_original"": 0.6926741775285443, ""logistic_context"": 0.7077265617239639, ""neural_context"": 0.7329802598719923, ""xgboost_context"": 0.6883252063143187}",70890,25398,96390,25602
+2025,xgboost_context,50,"{""logistic_original"": 0.6918312725841794, ""logistic_context"": 0.6974448145263286, ""neural_context"": 0.727673262935619, ""xgboost_context"": 0.6916406466228758}",96390,25602,122094,25398
+2026,xgboost_context,150,"{""logistic_original"": 0.6914908203269097, ""logistic_context"": 0.6997597755277007, ""neural_context"": 0.7318071886255687, ""xgboost_context"": 0.6918982374735241}",122094,25398,147594,22746

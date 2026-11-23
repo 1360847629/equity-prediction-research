@@ -1,0 +1,2 @@
+PASS: future ETF changes leave past features unchanged; all features finite and labels aligned.
+PASS: models use identical evaluated rows; probabilities, selected predictions and metrics agree.
