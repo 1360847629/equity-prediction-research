@@ -1,0 +1,5 @@
+Use only after reviewing, reproducing and being able to explain the work. Disclose AI assistance as appropriate.
+
+Developed and evaluated ridge, gradient-boosted, neural-network and validation-selected ensemble volatility models on 176,664 daily observations across 102 equities (2020–2026), using four expanding-window evaluations, feature ablation and paired block-bootstrap uncertainty analysis.
+
+One project does not establish a sustained proven track record.

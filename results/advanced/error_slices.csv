@@ -1,0 +1,15 @@
+slice,model,n,mae
+target_above_5pct,constant,2409,0.06000569724114399
+target_at_most_5pct,constant,96735,0.00897796229941899
+target_above_5pct,rolling_20,2409,0.054188905609892646
+target_at_most_5pct,rolling_20,96735,0.00789893013946963
+target_above_5pct,ridge,2409,0.052996410680302475
+target_at_most_5pct,ridge,96735,0.007860518429236405
+target_above_5pct,boosting,2409,0.053318811470686706
+target_at_most_5pct,boosting,96735,0.00791593441389485
+target_above_5pct,neural_network,2409,0.052642569192234694
+target_at_most_5pct,neural_network,96735,0.007825166594260257
+target_above_5pct,ensemble,2409,0.05270985243809853
+target_at_most_5pct,ensemble,96735,0.007827224413142918
+target_above_5pct,ridge_volatility_only,2409,0.05444739073221958
+target_at_most_5pct,ridge_volatility_only,96735,0.007944566758513951

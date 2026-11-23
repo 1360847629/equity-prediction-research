@@ -1,0 +1,3 @@
+PASS: nonlinear synthetic holdout MSE/baseline = 0.0109 (<0.2).
+PASS: ridge matches independent least-squares reference at alpha=0.
+PASS: saved MAE values recomputed from predictions; ensemble weights and predictions agree.

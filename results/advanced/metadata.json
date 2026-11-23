@@ -1,0 +1,12 @@
+{
+  "data_sha256": "f47a1ddfbb3f975840dafd91599fa797e06fe8510c9c7af422c3d041fba77ab4",
+  "plan_sha256": "01b3840d5913885cbed558be3f33f6cc0af84f9fff38c925ae6facb855585cfa",
+  "python": "3.12.14",
+  "numpy": "2.5.5",
+  "pandas": "3.1.1",
+  "observations": 99144,
+  "test_feature_start": "2023-01-03",
+  "test_feature_end": "2026-11-19",
+  "last_label_date": "2026-11-20",
+  "scope": "exploratory; previously inspected dataset; no untouched confirmatory holdout"
+}

@@ -1,0 +1,18 @@
+{
+  "raw_rows": 176664,
+  "duplicate_stock_dates": 0,
+  "missing_cells": {
+    "date": 0,
+    "open": 0,
+    "high": 0,
+    "low": 0,
+    "close": 0,
+    "volume": 0,
+    "Name": 0
+  },
+  "nonpositive_price_rows": 0,
+  "invalid_ohlc_rows": 0,
+  "prepared_rows": 174522,
+  "absolute_targets_over_20pct": 60,
+  "next_observation_gaps_over_4_calendar_days": 0
+}
